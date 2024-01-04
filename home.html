@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="Cirrus-Start-main/." rel="" >  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;"/>
+    <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script> 
+    <link rel="stylesheet" href="style.css">
+    <title>Cirrus</title>
+    </head>
+<body style="font-family: Arial, sans-serif; margin: 0;padding: 0; background-color: #f8ecf4;">
+
+     <div class="header header-fixed u-unselectable header-animated bg-red-200 ">
+        <div class="header-brand">
+            <div class="nav-item no-hover">
+                <a><h6 class="title">Logo</h6></a>
+            </div>
+            <div class="nav-item nav-btn" id="header-btn">
+            </div>
+        </div>
+        <div class="header-nav " id="header-menu" role="button">
+            <div class="nav-left">
+                <div class="nav-item text-center">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fab fa-wrapper fa-github" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-item text-center center">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fab fa-wrapper fa-slack" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-item text-center">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-item has-sub toggle-hover" id="left-dropdown">
+                    <a class="nav-dropdown-link">Animated</a>
+                    <ul class="dropdown-menu dropdown-animated bg-red-100 u-round-xl" role="menu">
+                        <li role="menuitem"><a href="#">First Item</a></li>
+                        <li role="menuitem"><a href="#">Second Item</a></li>
+                        <li role="menuitem"><a href="#">Third Item</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="nav-right">
+                <div class="nav-item active">
+                    <a href="#">Active</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#">Link 1</a>
+                </div>
+                <div class="nav-item has-sub toggle-hover" id="right-dropdown">
+                    <a class="nav-dropdown-link">Click Me</a>
+                    <ul class="dropdown-menu bg-red-100 u-round-xl" role="menu">
+                        <li role="menuitem"><a href="#">Acceuil</a></li>
+                        <li role="menuitem"><a href="Contact.html">Contact</a></li>
+                        <li role="menuitem"><a href="About.html">About</a></li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-image">
+        <div style="position: relative;">
+            <h1 class=" text-gray-000 " style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);">WELCOME TO CHEMIST</h1>
+            <button class=" bg-gray-000 border-pink-300 text-pink-700 btn--lg font-bold" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">TRY NOW</button>
+            <img class="w-80p w-50p-sm w-auto-md" src="img5.jpg" alt="Image description"/>
+        </div>
+    </div>
+
+
+
+    <div>
+        <div class=" py-2">
+            <h2 class=" text-red-400 u-text-center" style="margin-top: 40px;"><u><i>Popular Products</i></u></h2>
+        </div>
+    </div>
+      
+
+    <div class="grid grid-cols-3 u-gap-16 m-16 text-gray-700 u-text-center">
+        
+    <div class="card hover-grow grid-c-1 max-w-xs" style=" border-radius: 200px 200px 50px 50px;">
+        <div class="card__container">
+            <div class="card__image"><img src="img4.jpg"></div>
+            <div class="card__title-container">
+                <p class="title">Title</p>
+            </div>
+        </div>
+        <div class="content">
+            <p>Text and other content belong here, inside a <code class="text-red-400">content</code> div.</p>
+        </div>
+        <div class="card__action-bar u-center">
+            <button class="card outline text-white" style="background: linear-gradient(to right, #f8d3c9, #f2b6a5);">Buttons</button>
+        </div>
+    </div>
+
+
+
+    <div class="card hover-grow grid-c-1 max-w-xs" style=" border-radius: 200px 200px 50px 50px;">
+        <div class="card__container">
+            <div class="card__image"><img src="img4.jpg"></div>
+            <div class="card__title-container">
+                <p class="title">Title</p>
+            </div>
+        </div>
+        <div class="content">
+            <p>Text and other content belong here, inside a <code class="text-red-400">content</code> div.</p>
+        </div>
+        <div class="card__action-bar u-center">
+            <button class="card outline text-white" style="background: linear-gradient(to right, #f8d3c9, #f2b6a5);">Buttons</button>
+        </div>
+    </div>
+
+
+
+
+    <div class="card hover-grow grid-c-1 max-w-xs" style=" border-radius: 200px 200px 50px 50px;">
+        <div class="card__container">
+            <div class="card__image"><img src="img4.jpg"></div>
+            <div class="card__title-container">
+                <p class="title">Title</p>
+            </div>
+        </div>
+        <div class="content">
+            <p>Text and other content belong here, inside a <code class="text-red-400">content</code> div.</p>
+        </div>
+        <div class="card__action-bar u-center">
+            <button class="card outline text-white" style="background: linear-gradient(to right, #f8d3c9, #f2b6a5);">Buttons</button>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div class="grid grid-cols-3 u-gap-16 m-16 text-gray-700 u-text-center">
+        
+        <div class="card hover-grow grid-c-1 max-w-xs" style=" border-radius: 200px 200px 50px 50px;">
+            <div class="card__container">
+                <div class="card__image"><img src="img4.jpg"></div>
+                <div class="card__title-container">
+                    <p class="title">Title</p>
+                </div>
+            </div>
+            <div class="content">
+                <p>Text and other content belong here, inside a <code class="text-red-400">content</code> div.</p>
+            </div>
+            <div class="card__action-bar u-center">
+                <button class="card outline text-white" style="background: linear-gradient(to right, #f8d3c9, #f2b6a5);">Buttons</button>
+            </div>
+        </div>
+    
+    
+    
+        <div class="card hover-grow grid-c-1 max-w-xs" style=" border-radius: 200px 200px 50px 50px;">
+            <div class="card__container">
+                <div class="card__image"><img src="img4.jpg"></div>
+                <div class="card__title-container">
+                    <p class="title">Title</p>
+                </div>
+            </div>
+            <div class="content">
+                <p>Text and other content belong here, inside a <code class="text-red-400">content</code> div.</p>
+            </div>
+            <div class="card__action-bar u-center">
+                <button class="card outline text-white" style="background: linear-gradient(to right, #f8d3c9, #f2b6a5);">Buttons</button>
+            </div>
+        </div>
+    
+    
+        <div class="card hover-grow grid-c-1 max-w-xs" style=" border-radius: 200px 200px 50px 50px;">
+            <div class="card__container">
+                <div class="card__image "><img src="img4.jpg"></div>
+                <div class="card__title-container">
+                    <p class="title">Title</p>
+                </div>
+            </div>
+
+            <div class="content ">
+                <p>Text and other content belong here, inside a <code class="text-red-400">content</code> div.</p>
+            </div>
+            <div class="card__action-bar u-center">
+                <button class="card outline text-white" style="background: linear-gradient(to right, #f8d3c9, #f2b6a5);">Buttons</button>
+            </div>
+        </div>
+        </div>
+    
+    
+
+<div class="bg-gray-000 py-4">
+    <div class="u-overflow-hidden max-w-sm m-2 ml-24" >
+        <div style="float: left; width: 60%;">
+        <h3 class=" text-red-400"><b>Gift Ideas That Last Longer </b> </h2>
+          <p class="text-xs u-text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+             Debitis impedit magnam dolorum accusantium,
+             nam dolores sequi expedita modi distinctio error officiis obcaecati reiciendis vero,
+             veniam ratione.Doloribus suscipit expedita molestiae?</p>
+             <button  class="card outline text-white hover-grow ml-24" style="background: linear-gradient(to right, #f8d3c9, #f2b6a5);">Buttons</button>
+        </div>   
+    
+
+        <div class="card max-w-xs u-absolute u-pull-right w-30p u-border-2 u-shadow-lg" style="border-radius: 10px 10px 200px 200px; border:solid #262323;top: 2405px; right: 110px; " >
+            <div class="card__container">
+              <div class="card__image" style="background-image: url(img10.jpg); "></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <div class="" style="background-color: #f9c9d9; border: 6px solid #f8b2c8; padding: 20px;">
+      <div class=" grid grid-cols-2 mx-24 my-6 u-gap-12">
+        <div class="">
+        <img src="img11.jpg" class="w-100p max-w-60p h-32 u-shadow-lg" style="border-radius: 122px 0px 122px 0px;">
+        <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, sit dolores? Possimus modi, 
+            quaerat soluta accusamus, omnis consequatur odit dicta officiis,
+             ducimus explicabo consequuntur molestiae id fuga exercitationem unde delectus?</p>
+      
+        </div>
+      
+        <div class="">
+        
+        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, sit dolores? Possimus modi, 
+            quaerat soluta accusamus, omnis consequatur odit dicta officiis,
+             ducimus explicabo consequuntur molestiae id fuga exercitationem unde delectus?</p>
+        <img src="img11.jpg" class="w-100p max-w-60p h-32 mt-5 u-shadow-lg" style="border-radius: 122px 0px 122px 0px;">
+        </div>
+    </div>
+    </div>
+
+<div>
+    <h2 class="py-2 text-red-400 u-text-center mt-5"><u><i>Testimonials</i></u></h2>
+    <div class="grid grid-cols-3 u-gap-16 m-16">
+        <div class="grid-c-1">
+            <div class="avatar"><img src="avatar1.jpg" alt="avatar"></div>
+            <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Molestias dolore illum est quidem enim, at sapiente aute"
+            </i></p>
+        </div>
+
+        <div class="grid-c-1">
+            <div class="avatar"><img src="avatar2.jpg" alt="avatar"></div>
+            <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Molestias dolore illum est quidem enim, at sapiente aute"
+            </i></p>
+        </div>
+
+        <div class="grid-c-1">
+            <div class="avatar"><img src="avatar3.jpg" alt="avatar"></div>
+            <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Molestias dolore illum est quidem enim, at sapiente aute"
+            </i></p>
+        </div>
+
+    </div>
+</div>
+
+
+     <footer class="footer w-100p" style="background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(https://images.unsplash.com/photo-1514227765494-1bbd6ba05916?auto=format&fit=crop&w=1600&q=100) no-repeat;">
+        <h6 class="footer__title text-white uppercase">Logo</h6>
+        <div class="content">
+            <div class="divider"></div>
+    
+            <div class="row">
+                <div class="col-4">
+                    <ul class="no-bullets">
+                        <a href="!#">
+                            <li class="footer__list-item">Home</li>
+                        </a>
+                        <a href="!#">
+                            <li class="footer__list-item">Sign Up</li>
+                        </a>
+                        <a href="!#">
+                            <li class="footer__list-item">Downloads</li>
+                        </a>
+                        <ul>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <ul class="no-bullets">
+                        <a href="!#">
+                            <li class="footer__list-item">Company Information</li>
+                        </a>
+                        <a href="!#">
+                            <li class="footer__list-item">Contact Us</li>
+                        </a>
+                        <a href="!#">
+                            <li class="footer__list-item">Reviews</li>
+                        </a>
+                        <ul>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <ul class="no-bullets">
+                        <a href="!#">
+                            <li class="footer__list-item">FAQ</li>
+                        </a>
+                        <a href="!#">
+                            <li class="footer__list-item">Help Desk</li>
+                        </a>
+                        <a href="!#">
+                            <li class="footer__list-item">Forums</li>
+                        </a>
+                        <ul>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="subtitle">Company © 2018.</p>
+    </footer>
+      
+</body>
+</html>
