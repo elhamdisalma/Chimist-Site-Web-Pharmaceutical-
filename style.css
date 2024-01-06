@@ -1,12 +1,3 @@
-footer {
-    width: 100%;
-    background-color: #fff;
-    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(https://images.unsplash.com/photo-1514227765494-1bbd6ba05916?auto=format&fit=crop&w=1600&q=100) no-repeat;
-}
-
-
-/* login Page css */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 
@@ -17,8 +8,8 @@ footer {
     font-family: 'Montserrat', sans-serif;
 }
 body{
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background-color: #f8ecf4;
+    background: linear-gradient(to right, #f8ecf4, #eec6e1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,10 +107,10 @@ body{
 }
 
 .toggle{
-    background-color: #512da8;
+    background-color:#f8ecf4;
     height: 100%;
-    background: linear-gradient(to right, #5c6bc0, #512da8);
-    color: #fff;
+    background: linear-gradient(to right,#f8ecf4,#e97680);
+    color: #ffffff;
     position: relative;
     left: -100%;
     height: 100%;
@@ -163,3 +154,4 @@ body{
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+ 
