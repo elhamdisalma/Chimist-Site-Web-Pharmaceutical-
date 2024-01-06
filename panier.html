@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script> 
     <link rel="stylesheet" href="style.css">
-    <title>Contact</title>
+    <title>Cirrus</title>
     </head>
-<body style="font-family: Arial, sans-serif; margin: 0;padding: 0; background-color: #f3eeee;">
+<body  style="font-family: Arial, sans-serif; margin: 0;padding: 0; background-color: #f3eeee;">
 
      <div class="header header-fixed u-unselectable header-animated bg-red-200 ">
         <div class="header-brand">
@@ -21,9 +21,6 @@
                 <a><h6 class="title">Logo</h6></a>
             </div>
             <div class="nav-item nav-btn" id="header-btn">
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
         </div>
         <div class="header-nav " id="header-menu" role="button">
@@ -52,9 +49,9 @@
                 <div class="nav-item has-sub toggle-hover" id="left-dropdown">
                     <a class="nav-dropdown-link">Animated</a>
                     <ul class="dropdown-menu dropdown-animated bg-red-100 u-round-xl" role="menu">
-                        <li role="menuitem"><a href="home.html">Acceuil</a></li>
-                        <li role="menuitem"><a href="Contact.html">Contact</a></li>
-                        <li role="menuitem"><a href="About.html">About</a></li>
+                        <li role="menuitem"><a href="#">First Item</a></li>
+                        <li role="menuitem"><a href="#">Second Item</a></li>
+                        <li role="menuitem"><a href="#">Third Item</a></li>
                     </ul>
                 </div>
             </div>
@@ -69,19 +66,16 @@
                 <div class="nav-item has-sub toggle-hover" id="right-dropdown">
                     <a class="nav-dropdown-link">Click Me</a>
                     <ul class="dropdown-menu bg-red-100 u-round-xl" role="menu">
-                        <li role="menuitem"><a href="home.html">Acceuil</a></li>
+                        <li role="menuitem"><a href="#">Acceuil</a></li>
                         <li role="menuitem"><a href="Contact.html">Contact</a></li>
-                        <li role="menuitem"><a href="About.html">About</a></li>
+                        <li role="menuitem"><a href="About.html">About</a></li> 
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-
-    <div class="mt-10 ml-4">
+    <div class="mt-10 ml-4 bg-gray-200 mx-2 my-2">
         <ul class="breadcrumb breadcrumb--left ">
             <li class="breadcrumb__item ">
                 <a href="home.html" class="text-red-400" >Home</a>
@@ -89,70 +83,119 @@
             <li class="breadcrumb__item">
                 <a href="About.html" class="text-red-400">About</a>
             </li>
+        </li>
+        <li class="breadcrumb__item breadcrumb__item--active">
+            <a href="#" class="text-gray-700">Panier</a>
+        </li>
         </ul>
+    </div>     
+
+
+<div class="my-8 mx-8 bg-gray-100 u-shadow-xl"  style="border: 3px solid #e6ccd0; padding: 20px;">
+    <table class="table bordered " >
+        <thead>
+            <tr>
+                <th><abbr title="Title1">Image</abbr></th>
+                <th><abbr title="Title2">Product</abbr></th>
+                <th><abbr title="Title3">Price</abbr></th>
+                <th><abbr title="Title4">Quantity</abbr></th>
+                <th><abbr title="Title5">Total</abbr></th>
+                <th><abbr title="Short">Remove</abbr></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><img src="images/product_02.png" class="u-center" style="height: 40%; width: 40%;"></th>
+                <td>Ibuprofen</td>
+                <td>$55.00</td>
+                <td><input type="number" value="1" class="input--sm w-12 u-center"  /></td>
+                <td>$49.00</td>
+                <td><input type="button" value="X" class="input--xs w-12 bg-red-200 u-center" style="width: 15%;" /></td>
+            </tr>
+            <tr>
+                <th><img src="images/product_01.png" class="u-center" style="height: 40%; width: 40%;"></th>
+                <td>Bioderma</td>
+                <td>$49.00</td>
+                <td><input type="number" value="1" class="input--sm w-12 u-center"  /></td>
+                <td>$49.00</td>
+                <td><input type="button" value="X" class="input--xs w-12 bg-red-200 u-center"  /></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>
+
+<div class="grid grid-cols-2 my-8 mx-8 font-bold u-gap-10">
+    <div>
+    <div class="grid grid-cols-2 u-gap-3"> 
+        <div class="btn bg-red-200 u-center w-100p-md text-red-400 border-gray-200 ">Update Cart</div>
+        <div class="btn bg-white-100 u-center w-100p-md text-red-400 border-red-400">Continue Shopping</div>
     </div>
 
+    <div class=" my-4">
+        <div class="text-gray-800"><h4> Coupon</h4></div>
+        <div><p class="text-gray-600">Enter your coupon code if you have one.</p></div>
 
-    <h2 class="py-2 text-red-400" style="text-align: center; margin-top: 40px;"><i>Get In Touch</i></h2>
-    
-<div class="bg-red-100 my-5 mx-5 text-red-400 font-bold u-shadow-xl" style="border: 3px solid #e6ccd0; padding: 20px;">
-        <div class="grid grid-cols-2 u-gap-4">
+        <div class="grid grid-cols-3 u-gap-3">
+        <input type="text" placeholder="Coupon Code" class="grid grid-c-2"/>
+        <div class="btn bg-red-200 u-center w-100p-md text-red-400 border-red-400 border-red-400">Apply Coupon</div>
+        </div>
+    </div>
+    </div>
+    <div class="ml-24">
         <div>
-        <label>First Name</label><br>
-        <input type="text" placeholder="Your first name ..."/>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="u-text-right"><abbr title="Title1">CART TOTALS</abbr></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th class="u-text-left">Subtotal</th>
+                        <td>$230.00</td>
+                    </tr>
+                    <tr>
+                        <th class="u-text-left">Total</th>
+                        <td>$230.00</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="btn bg-red-200 u-center w-100p-md text-red-400 border-red-400 border-red-400">Procceed To Checkout</div>
+
+    </div>
+</div>
+
+    
+<div class="b1">
+    
+    <div class="grid grid-cols-2 u-gap-2 bg-red-200 " >
+        <div>
+            <div class="card my-6 mx-6 hover-grow h-32" style="max-width: 100%;" >
+                <div class="card__container">
+                    <div class="card__image"><img src="images/bg_1.jpg"></div>
+                    <h2>Pharma Products</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.</p>
+                </div>
+            </div> 
         </div>
         <div>
-        <label>Last Name</label><br>
-        <input type="text" placeholder="Your last name ..."/>
-        </div>
-        </div>
-
-        <div class="grid grid-cols-1">
-        <label>Email<br>
-        <input type="text" placeholder="example@.com ..."/>
-        </div>
-        <div class="grid grid-cols-1">
-        <label>Subject<br>
-        <input type="url" placeholder="Something ..."/>
-        </div>
-
-        <div class="grid grid-cols-1">
-            <label>Message<br>
-            <textarea></textarea>
-            <div type="submit" class="btn btn-animated bg-red-200 border-red-300 text-red-400 btn--lg"> SEnd Message </div>
-        </div>
-
-</div>   
-
-
-
-<div class="bg-red-200 container">
-    
-<div>
-
-    <div class="mx-8 my-8"><h5 class="text-gray-800">Offices</h5></div>
-    <div class="grid grid-cols-3 u-gap-10 my-8 mx-4 ">
-        
-        <div class=" card bg-gray-000">
-            <h5 class="text-gray-800 mx-2 my-2"> New York  </h5>
-            <p class="text-gray-600 mx-2"> 203 Fake St. Mountain View, San Francisco, California, USA</p>
-        </div>
-        <div class="card bg-gray-000 ">
-            <h5 class="text-gray-800 mx-2 my-2"> London  </h5>
-            <p class="text-gray-600 mx-2"> 203 Fake St. Mountain View, San Francisco, California, USA</p>
-        </div>
-        <div class="card bg-gray-000">
-            <h5 class="text-gray-800 mx-2 my-2"> Rabat  </h5>
-            <p class="text-gray-600 mx-2"> 203 Fake St. Mountain View, San Francisco, California, USA</p>
+            <div class="card my-6 mx-6 hover-grow h-32" style="max-width: 100%;" >
+                <div class="card__container">
+                    <div class="card__image"><img src="images/bg_2.jpg"></div>
+                    <h2>Rated by Experts</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.</p>
+                </div>
+            </div> 
         </div>
 
     </div>
 </div>
-</div>
-
-
-
-
 
 
     <footer class="footer w-100p" style="background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(https://images.unsplash.com/photo-1514227765494-1bbd6ba05916?auto=format&fit=crop&w=1600&q=100) no-repeat;">
@@ -208,8 +251,21 @@
                 </div>
             </div>
         </div>
-        <p class="subtitle">Company © 2018.</p>
+        <p class="subtitle">Company © 2024.</p>
     </footer>
       
+
+
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+  
+    <script src="js/main.js"></script>
 </body>
 </html>
