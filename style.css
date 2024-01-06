@@ -4,6 +4,7 @@ footer {
     background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(https://images.unsplash.com/photo-1514227765494-1bbd6ba05916?auto=format&fit=crop&w=1600&q=100) no-repeat;
 }
 
+<<<<<<< HEAD
 /* login Page css */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
@@ -160,6 +161,7 @@ body{
 }
 
 .container.active .toggle-right{
-    transform: translateX(200%);
-}
- 
+    transform: translateX(200% 
+=======
+@import 'path/to/_configs.scss';
+>>>>>>> e79a463dd8ac93bb4729c143ddbba90dbeec082b
