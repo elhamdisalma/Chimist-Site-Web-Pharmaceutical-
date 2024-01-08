@@ -34,7 +34,7 @@ body{
     letter-spacing: 0.3px;
     margin: 20px 0;
 }  
-.formulaire{
+.container form{
     background-color: #fff;
     display: flex;
     align-items: center;
