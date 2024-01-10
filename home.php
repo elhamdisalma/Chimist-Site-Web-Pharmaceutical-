@@ -27,7 +27,6 @@ include"inc/function.php";
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script> 
-    <link rel="stylesheet" href="style.css">
     <title>Cirrus</title>
     </head>
 <body style="font-family: Arial, sans-serif; margin: 0;padding: 0; background-color: #f8ecf4;">
@@ -55,7 +54,7 @@ include"inc/function.php";
     <div class="grid grid-cols-4 u-gap-4 m-8 text-gray-700 u-text-center ">
     <?php  
              foreach($produit as $val){
-               ?>
+    ?>
     <div class="card hover-grow grid-c-1 max-w-xs " >
         <div class="card__container ">
             <div class="card__image "><img src="images/<?php echo $val['image']; ?>"></div>

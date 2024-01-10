@@ -10,15 +10,10 @@ include"inc/function.php";
     $produitR= getProdRef($_GET['id_product']);
     
  }
-   //var_dump($produitR);
-  //var_dump($description);
 
-  // if(isset($_GET['id_product'])){
-    //$produit= getProdId($_GET['id_product']);
-   
-    
-
- //}
+ $id_produit = $produitR['id_product']
+  
+ 
    
 ?>
 
@@ -34,7 +29,6 @@ include"inc/function.php";
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script> 
-    <link rel="stylesheet" href="style.css">
     <title>Product</title>
     </head>
 <body  style="font-family: Arial, sans-serif; margin: 0;padding: 0; background-color: #f3eeee;">
@@ -50,7 +44,7 @@ include"inc/function.php";
                 <a href="About.html" class="text-red-400">About</a>
             </li>
         </li>
-        
+         
         <li class="breadcrumb__item breadcrumb__item--active">
             <a href="#" class="text-gray-700"><?php echo $produitR['nom']; ?> </a>
         </li>
@@ -72,9 +66,14 @@ include"inc/function.php";
           <p class="text-gray-700"><del> <?php echo "$" .$produitR['ancien_prix']; ?></del>  <strong class="text-red-400 text-xl "> <?php echo "$" .$produitR['prix']; ?></strong></p>
 
     
-          <input type="number" value="1" name="product" class="input--sm w-12 "  />
+          
+    <!-- ajouter au panier button -->
     <div class="mt-5">
-    <input type="submit" class="btn btn-animated bg-red-200 border-red-300 text-red-400 btn--lg " value="Add To Cart">
+        <form action="ajouter_panier.php" method="POST">
+            <input type="number" value="0" name="quantite" class="input--sm w-12 "  />
+            <input type="hidden" name ="id_produit" value="<?php echo $id_produit;?>">
+            <input type="submit" class="btn btn-animated bg-red-200 border-red-300 text-red-400 btn--lg " value="Add To Cart">
+        </form>   
     </div>
     <div class="btn-group btn-group-fill border-red-300">
         <button class="bg-red-200 text-red-400">Ordering Information</button>

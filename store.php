@@ -1,6 +1,6 @@
 <?php
   session_start();
-include"inc/function.php";
+  include"inc/function.php";
    $description=getAllDesc();
    $produit=getAllProd();
 

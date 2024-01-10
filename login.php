@@ -44,30 +44,34 @@
 
 <?php
 
-    include('db_connection.php');
+    session_start();
+    include("db_connection.php");
     if (isset($_POST['Signin'])) {
         $email = $_POST['email'];
         $password = $_POST['pass'];
-        echo $password;
         $sql = "select * from user where email = '$email'";  
         $result = mysqli_query($conn, $sql);  
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
-        $count = mysqli_num_rows($result);  
+        $count = mysqli_num_rows($result);
+       
         
-        if($row){  
+        if($row){ 
 
+            
             if(password_verify($password, $row["password"])){
 
+                $_SESSION['user'] = $row; 
                 header("Location: store.php");
             }
+            else{
+               echo '<script>
+                    window.location.href="login.php";
+                    alert("Login ou password incorrectes.");
+                </script>';
+                
+            } 
         }  
-        else{  
-            echo  '<script>
-                        
-                        alert("Login failed. Invalid username or password!!")
-                        window.location.href = "login.php";
-                    </script>';
-        }     
+           
     }
     ?>
 

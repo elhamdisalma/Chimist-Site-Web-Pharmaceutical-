@@ -1,3 +1,10 @@
+<?php
+session_start();
+include("db_connection.php");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +17,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script> 
-    <link rel="stylesheet" href="style.css">
     <title>Cirrus</title>
     </head>
 <body  style="font-family: Arial, sans-serif; margin: 0;padding: 0; background-color: #f3eeee;">
@@ -34,10 +40,14 @@
             <a href="#" class="text-gray-700">Panier</a>
         </li>
         </ul>
-    </div>     
+    </div>   
+    
+    
+
 
 
 <div class="my-8 mx-8 bg-gray-100 u-shadow-xl"  style="border: 3px solid #e6ccd0; padding: 20px;">
+
     <table class="table bordered " >
         <thead>
             <tr>
@@ -47,30 +57,79 @@
                 <th><abbr title="Title4">Quantity</abbr></th>
                 <th><abbr title="Title5">Total</abbr></th>
                 <th><abbr title="Short">Remove</abbr></th>
+                
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th><img src="images/product_02.png" class="u-center" style="height: 40%; width: 40%;"></th>
-                <td>Ibuprofen</td>
-                <td>$55.00</td>
-                <td><input type="number" value="1" class="input--sm w-12 u-center"  /></td>
-                <td>$49.00</td>
-                <td><input type="button" value="X" class="input--xs w-12 bg-red-200 u-center" style="width: 15%;" /></td>
-            </tr>
-            <tr>
-                <th><img src="images/product_01.png" class="u-center" style="height: 40%; width: 40%;"></th>
-                <td>Bioderma</td>
-                <td>$49.00</td>
-                <td><input type="number" value="1" class="input--sm w-12 u-center"  /></td>
-                <td>$49.00</td>
-                <td><input type="button" value="X" class="input--xs w-12 bg-red-200 u-center"  /></td>
-            </tr>
+        <?php
+        
+                $id_utilisateur = $_SESSION['user']['id_user'];
+                $panier= $_SESSION['panier'][$id_utilisateur];
+                
+                if (!empty($panier)) {
+                    $idProduits = array_keys($panier);
+                    $idProduits = implode(',', $idProduits);
+                    $result = $conn->query("SELECT * FROM product WHERE id_product IN ($idProduits)");
 
+                    if ($result) {
+                        $produits = [];
+                        while ($row = $result->fetch_assoc()) {
+                            // Utilisez l'ID du produit comme clé unique dans le tableau
+                            $produits[$row['id_product']] = $row;
+                        }
+                        $result->free(); // Free the result set
+                    
+                    }
+            }
+            ?>
+         <?php
+                $total = 0;
 
+                if (!empty($produits)) {
+                    foreach ($produits as $produit) {
+                        $total_produit = $produit['prix'] * $panier[$produit['id_product']];
+                        $total += $total_produit;
+                        ?>
+                        <tr>
+                            <th><img src="images/<?php echo $produit['image_product']; ?>" class="u-center" style="height: 40%; width: 40%;"></th>
+                            <td><?php echo $produit['nom'] ?></td>
+                            <td><?php echo $produit['prix'] ?> MAD</td>
+                            <td>
+                                <input type="number" value=<?php echo $panier[$produit['id_product']] ?> name="quantite" class="input--sm w-12 " />
+                            </td>
+                            <td><?php echo $total_produit ?>MAD</td>
+                            <td>
+                                <form action="supprimer_panier.php" method="POST">
+                                    <input type="hidden" name="id_produit" value="<?php echo $produit['id_product']; ?>">
+                                    <input type="submit" value="X" class="input--xs w-12 bg-red-200 u-center"/>
+                                </form>
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                }
+                ?>
+            
+           
+           
+                
+       
         </tbody>
     </table>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="grid grid-cols-2 my-8 mx-8 font-bold u-gap-10">
     <div>
@@ -101,11 +160,11 @@
                 <tbody>
                     <tr>
                         <th class="u-text-left">Subtotal</th>
-                        <td>$230.00</td>
+                        <td><?php echo $total?></td>
                     </tr>
                     <tr>
                         <th class="u-text-left">Total</th>
-                        <td>$230.00</td>
+                        <td><?php echo $total?></td>
                     </tr>
 
                 </tbody>
