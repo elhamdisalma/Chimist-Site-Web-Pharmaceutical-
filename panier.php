@@ -32,12 +32,6 @@ $user_id = $_SESSION['id_user'];
         <ul class="breadcrumb breadcrumb--left ">
             <li class="breadcrumb__item ">
                 <a href="home.php" class="text-red-400" >Home</a>
-<<<<<<< HEAD
-            </li>
-            <li class="breadcrumb__item">
-                <a href="About.php" class="text-red-400">About</a>
-=======
->>>>>>> 74a92ca4d99f04c1eef1469eae62ade263d3aa60
             </li>
         </li>
         <li class="breadcrumb__item breadcrumb__item--active">
