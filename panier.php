@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("db_connection.php");
+$user_id = $_SESSION['id_user'];
 
 ?>
 
@@ -17,7 +18,7 @@ include("db_connection.php");
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script> 
-    <title>Cirrus</title>
+    <title>Panier</title>
     </head>
 <body  style="font-family: Arial, sans-serif; margin: 0;padding: 0; background-color: #f3eeee;">
 
@@ -31,9 +32,12 @@ include("db_connection.php");
         <ul class="breadcrumb breadcrumb--left ">
             <li class="breadcrumb__item ">
                 <a href="home.php" class="text-red-400" >Home</a>
+<<<<<<< HEAD
             </li>
             <li class="breadcrumb__item">
                 <a href="About.php" class="text-red-400">About</a>
+=======
+>>>>>>> fb52e0793546a94a7b27bdfcc1af73be6707801e
             </li>
         </li>
         <li class="breadcrumb__item breadcrumb__item--active">
@@ -61,54 +65,34 @@ include("db_connection.php");
             </tr>
         </thead>
         <tbody>
-        <?php
-        
-                $id_utilisateur = $_SESSION['user']['id_user'];
-                $panier= $_SESSION['panier'][$id_utilisateur];
-                
-                if (!empty($panier)) {
-                    $idProduits = array_keys($panier);
-                    $idProduits = implode(',', $idProduits);
-                    $result = $conn->query("SELECT * FROM product WHERE id_product IN ($idProduits)");
-
-                    if ($result) {
-                        $produits = [];
-                        while ($row = $result->fetch_assoc()) {
-                            // Utilisez l'ID du produit comme clé unique dans le tableau
-                            $produits[$row['id_product']] = $row;
-                        }
-                        $result->free(); // Free the result set
-                    
-                    }
-            }
-            ?>
-         <?php
-                $total = 0;
-
-                if (!empty($produits)) {
-                    foreach ($produits as $produit) {
-                        $total_produit = $produit['prix'] * $panier[$produit['id_product']];
-                        $total += $total_produit;
-                        ?>
+                <?php
+                    $cart_query = mysqli_query($conn, "SELECT * FROM `panier` WHERE id_user = '$user_id'") or die('query failed');
+                    $grand_total = 0;
+                    if(mysqli_num_rows($cart_query) > 0){
+                        while($fetch_cart = mysqli_fetch_assoc($cart_query)){
+                ?>
                         <tr>
-                            <th><img src="images/<?php echo $produit['image_product']; ?>" class="u-center" style="height: 40%; width: 40%;"></th>
-                            <td><?php echo $produit['nom'] ?></td>
-                            <td><?php echo $produit['prix'] ?> MAD</td>
+                            <th><img src="images/<?php echo $fetch_cart['image']; ?>" class="u-center" style="height: 40%; width: 40%;"></th>
+                            <td><?php echo $fetch_cart['nom']; ?></td>
+                            <td><?php echo $fetch_cart['prix']; ?> MAD</td>
                             <td>
-                                <input type="number" value=<?php echo $panier[$produit['id_product']] ?> name="quantite" class="input--sm w-12 " />
+                                <input type="number" value="<?php echo $fetch_cart['quantite']; ?>" name="quantite" class="input--sm w-12 " />
                             </td>
-                            <td><?php echo $total_produit ?>MAD</td>
+                            <td> <?php echo $sub_total = ($fetch_cart['prix'] * $fetch_cart['quantite']); ?> MAD</td>
                             <td>
                                 <form action="supprimer_panier.php" method="POST">
-                                    <input type="hidden" name="id_produit" value="<?php echo $produit['id_product']; ?>">
+                                    <input type="hidden" name="id_produit" value="<?php echo $fetch_cart['id']; ?>">
                                     <input type="submit" value="X" class="input--xs w-12 bg-red-200 u-center"/>
                                 </form>
                             </td>
                         </tr>
-                        <?php
-                    }
-                }
-                ?>
+                    <?php
+                            $grand_total += $sub_total;
+                            }
+                        }else{
+                            echo '<tr><td style="padding:20px; text-transform:capitalize;" colspan="6">no item added</td></tr>';
+                        }
+                    ?>
             
            
            
@@ -117,19 +101,6 @@ include("db_connection.php");
         </tbody>
     </table>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="grid grid-cols-2 my-8 mx-8 font-bold u-gap-10">
     <div>
@@ -160,11 +131,11 @@ include("db_connection.php");
                 <tbody>
                     <tr>
                         <th class="u-text-left">Subtotal</th>
-                        <td><?php echo $total?></td>
+                        <td><?php echo $grand_total; ?> MAD</td>
                     </tr>
                     <tr>
                         <th class="u-text-left">Total</th>
-                        <td><?php echo $total?></td>
+                        <td><?php echo $grand_total; ?> MAD</td>
                     </tr>
 
                 </tbody>

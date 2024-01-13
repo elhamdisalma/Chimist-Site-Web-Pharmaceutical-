@@ -27,7 +27,7 @@ include"inc/function.php";
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script> 
-    <title>Cirrus</title>
+    <title>Home Page</title>
     </head>
 <body style="font-family: Arial, sans-serif; margin: 0;padding: 0; background-color: #f8ecf4;">
 <?php
@@ -69,7 +69,8 @@ include"inc/function.php";
         <a href="<?php echo 'product.php?id_product=' . $val['id_product'] ?>" class="btn card btn-animated bg-red-200 border-red-300 text-white  hover-grow   " style="background: linear-gradient(to right, #f8d3c9, #f2b6a5);">Afficher</a>
         </div>
     </div>
- <?php   } 
+ <?php 
+   } 
  ?>
 
 

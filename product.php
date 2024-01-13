@@ -69,10 +69,13 @@ include"inc/function.php";
           
     <!-- ajouter au panier button -->
     <div class="mt-5">
-        <form action="ajouter_panier.php" method="POST">
-            <input type="number" value="0" name="quantite" class="input--sm w-12 "  />
-            <input type="hidden" name ="id_produit" value="<?php echo $id_produit;?>">
-            <input type="submit" class="btn btn-animated bg-red-200 border-red-300 text-red-400 btn--lg " value="Add To Cart">
+        <form action="add_to_cart.php" method="POST">
+            <input type="number" value="1" name="quantite" class="input--sm w-12 "  />
+            <input type="hidden" name ="id_produit" value="<?php echo $id_produit;?>"> 
+            <input type="hidden" name="product_image" value="<?php echo$produitR['image_product']; ?>">
+            <input type="hidden" name="product_name" value="<?php echo $produitR['nom']; ?>">
+            <input type="hidden" name="product_price" value="<?php echo $produitR['prix']; ?>">
+            <input type="submit" class="btn btn-animated bg-red-200 border-red-300 text-red-400 btn--lg " name="add_to_cart" value="Add To Cart">
         </form>   
     </div>
     <div class="btn-group btn-group-fill border-red-300">

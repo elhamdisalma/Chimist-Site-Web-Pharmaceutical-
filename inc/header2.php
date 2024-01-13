@@ -1,6 +1,12 @@
 <?php
+session_start();
 include("db_connection.php");
+$user_id = $_SESSION['user']['id_user'];
+
+$select_rows = mysqli_query($conn, "SELECT * FROM `panier` WHERE id_user = '$user_id'") or die('query failed');
+$row_count = mysqli_num_rows($select_rows);
 ?>
+
 <div class="header header-fixed u-unselectable header-animated bg-red-200 ">
         <div class="header-brand">
             <div class="nav-item no-hover">
@@ -45,25 +51,7 @@ include("db_connection.php");
             <div class="nav-right">
 
                 <div class="nav-item">
-                    <a href="panier.php"><i class="fa fa-cart-arrow-down"></i>(<?php 
-
-                        if (isset($_SESSION['id_user'])) {
-                            
-
-                            $user_id = $_SESSION['id_user'];
-                            
-                            $select_rows = mysqli_query($conn, "SELECT * FROM `panier` WHERE id_user = '$user_id'") or die('query failed');
-                            $row_count = mysqli_num_rows($select_rows);
-
-                            echo $row_count; 
-                            }
-                        else {
-                            echo 0;
-
-                        }
-                    
-                    
-                    ?>)</a>
+                    <a href="panier.php"><i class="fa fa-cart-arrow-down"></i>(<?php echo $row_count;  ?>)</a>
                 </div>
                 <div class="nav-item">
                     <a href="login.php"><i class="fa fa-user"></i></a>
