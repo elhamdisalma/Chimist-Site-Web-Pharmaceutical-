@@ -61,7 +61,7 @@
             if(password_verify($password, $row["password"])){
 
                 $_SESSION['user'] = $row; 
-                header("Location: store.php");
+                header("Location: home.php");
             }
             else{
                echo '<script>
