@@ -52,7 +52,7 @@
                        $id_utilisateur = $_SESSION['user']['id_user'];
                        
                     ?>
-                    <a href="panier.php">Panier(<?php  echo count($_SESSION['panier'][$id_utilisateur]);?>)</a>
+                    <a href="panier.php">Panier(0)</a>
                 </div>
                 <div class="nav-item">
                     <a href="login.php"><i class="fa fa-user"></i></a>
