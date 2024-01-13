@@ -60,7 +60,7 @@
             
             if(password_verify($password, $row["password"])){
 
-                $_SESSION['user'] = $row; 
+                $_SESSION['id_user'] = $row['id_user']; 
                 header("Location: home.php");
             }
             else{
