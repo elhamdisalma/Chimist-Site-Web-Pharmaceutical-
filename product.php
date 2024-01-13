@@ -3,6 +3,7 @@
 include"inc/function.php";
    $description=getAllDesc();
    $produit=getAllProd();
+   $categorie=getAllCat();
 
   $ic=$_GET['id_product']; 
   //var_dump($ic);
@@ -38,10 +39,10 @@ include"inc/function.php";
     <div class="mt-10 ml-4 bg-gray-200 mx-2 my-2">
         <ul class="breadcrumb breadcrumb--left ">
             <li class="breadcrumb__item ">
-                <a href="home.html" class="text-red-400" >Home</a>
+                <a href="home.php" class="text-red-400" >Home</a>
             </li>
             <li class="breadcrumb__item">
-                <a href="About.html" class="text-red-400">About</a>
+                <a href="About.php" class="text-red-400">About</a>
             </li>
         </li>
          
@@ -66,7 +67,18 @@ include"inc/function.php";
           <p class="text-gray-700"><del> <?php echo "$" .$produitR['ancien_prix']; ?></del>  <strong class="text-red-400 text-xl "> <?php echo "$" .$produitR['prix']; ?></strong></p>
 
     
-          
+          <div class="grid grid-c-1 font-bold u-text-center">  
+    
+    <?php 
+                 foreach($categorie as $key => $val){
+
+                        if($val['num']==$produitR['num_cat']){
+                           echo ' <a href="home.php?id='.$val['num'].'" class="btn btn-animated bg-gray-000 border-red-300 text-red-400 btn--sm u-center ml-0">'.$val['nom'].'</a> ';
+                              
+                        }
+                 }
+                 ?>
+    </div>       
     <!-- ajouter au panier button -->
     <div class="mt-5">
         <form action="add_to_cart.php" method="POST">

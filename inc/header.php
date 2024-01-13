@@ -1,5 +1,6 @@
 <?php
 include("db_connection.php");
+$categorie=getAllCat();
 ?>
 <div class="header header-fixed u-unselectable header-animated bg-red-200 ">
         <div class="header-brand">
@@ -35,9 +36,13 @@ include("db_connection.php");
                 <div class="nav-item has-sub toggle-hover" id="left-dropdown">
                     <a class="nav-dropdown-link">Categories</a>
                     <ul class="dropdown-menu dropdown-animated bg-red-100 u-round-xl" role="menu">
-                        <li role="menuitem"><a href="#">First Item</a></li>
-                        <li role="menuitem"><a href="#">Second Item</a></li>
-                        <li role="menuitem"><a href="#">Third Item</a></li>
+                    <?php
+                        foreach($categorie as $val){
+
+                    ?>
+                    
+                        <li role="menuitem"><a href="home.php?id=<?php echo $val['num'] ; ?>"> <?php echo $val['nom'] ; ?></a></li>
+                    <?php } ?>
                     </ul>
                 </div>
             </div>
