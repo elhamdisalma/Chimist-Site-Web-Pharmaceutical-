@@ -1,6 +1,5 @@
 <?php
 include("db_connection.php");
-$categorie=getAllCat();
 ?>
 <div class="header header-fixed u-unselectable header-animated bg-red-200 ">
         <div class="header-brand">
@@ -36,13 +35,9 @@ $categorie=getAllCat();
                 <div class="nav-item has-sub toggle-hover" id="left-dropdown">
                     <a class="nav-dropdown-link">Categories</a>
                     <ul class="dropdown-menu dropdown-animated bg-red-100 u-round-xl" role="menu">
-                    <?php
-                        foreach($categorie as $val){
-
-                    ?>
-                    
-                        <li role="menuitem"><a href="home.php?id=<?php echo $val['num'] ; ?>"> <?php echo $val['nom'] ; ?></a></li>
-                    <?php } ?>
+                        <li role="menuitem"><a href="#">First Item</a></li>
+                        <li role="menuitem"><a href="#">Second Item</a></li>
+                        <li role="menuitem"><a href="#">Third Item</a></li>
                     </ul>
                 </div>
             </div>
@@ -74,7 +69,7 @@ $categorie=getAllCat();
                     <a href="login.php"><i class="fa fa-user"></i></a>
                 </div>
                 <div class="nav-item">
-                    <a href="logout.php" onclick="return confirm('Are you sure you want to logout?');" name="logout">Logout</a>
+                    <a href="logout.php" onclick="return confirm('Are you sure you want to logout?');" name="logout">logout</a>
                 </div>
                 <div class="nav-item has-sub toggle-hover" id="right-dropdown">
                     <a class="nav-dropdown-link">Options</a>

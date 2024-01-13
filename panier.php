@@ -3,6 +3,12 @@ session_start();
 include("db_connection.php");
 $user_id = $_SESSION['id_user'];
 
+if(isset($_POST['update_cart'])){
+    $update_quantity = $_POST['quantite'];
+    $update_id = $_POST['cart_id'];
+    mysqli_query($conn, "UPDATE `panier` SET quantite = '$update_quantity' WHERE id = '$update_id'") or die('query failed');
+ }
+
 ?>
 
 
@@ -32,12 +38,6 @@ $user_id = $_SESSION['id_user'];
         <ul class="breadcrumb breadcrumb--left ">
             <li class="breadcrumb__item ">
                 <a href="home.php" class="text-red-400" >Home</a>
-<<<<<<< HEAD
-            </li>
-            <li class="breadcrumb__item">
-                <a href="About.php" class="text-red-400">About</a>
-=======
->>>>>>> fb52e0793546a94a7b27bdfcc1af73be6707801e
             </li>
         </li>
         <li class="breadcrumb__item breadcrumb__item--active">
@@ -76,14 +76,15 @@ $user_id = $_SESSION['id_user'];
                             <td><?php echo $fetch_cart['nom']; ?></td>
                             <td><?php echo $fetch_cart['prix']; ?> MAD</td>
                             <td>
-                                <input type="number" value="<?php echo $fetch_cart['quantite']; ?>" name="quantite" class="input--sm w-12 " />
+                                    <form action="" method="post">
+                                        <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['id']; ?>">
+                                        <input type="number" value="<?php echo $fetch_cart['quantite']; ?>" name="quantite" class="input--sm w-12 " />
+                                        <input type="submit" name="update_cart" value="update" class="option-btn">
+                                    </form>
                             </td>
                             <td> <?php echo $sub_total = ($fetch_cart['prix'] * $fetch_cart['quantite']); ?> MAD</td>
                             <td>
-                                <form action="supprimer_panier.php" method="POST">
-                                    <input type="hidden" name="id_produit" value="<?php echo $fetch_cart['id']; ?>">
-                                    <input type="submit" value="X" class="input--xs w-12 bg-red-200 u-center"/>
-                                </form>
+                                    <a href="supprimer_panier.php?remove=<?php echo $fetch_cart['id']; ?>" onclick="return confirm('remove item from cart?');"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php
@@ -142,7 +143,9 @@ $user_id = $_SESSION['id_user'];
             </table>
         </div>
 
-        <div class="btn bg-red-200 u-center w-100p-md text-red-400 border-red-400 border-red-400">Procceed To Checkout</div>
+        <div class="btn bg-red-200 u-center w-100p-md text-red-400 border-red-400 border-red-400">
+            <a href="checkout.php">Procceed To Checkout</a>
+        </div>
 
     </div>
 </div>

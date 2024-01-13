@@ -65,17 +65,6 @@
 
        }
 
-       function getAllCat(){
-   
-        $conn=conn();
-        $requet="SELECT * FROM categorie ";
-        $reponse=$conn->query($requet);
-        $categorie=$reponse->fetchAll();
-        
-          return $categorie;
-        
-       }
-
 
 
 

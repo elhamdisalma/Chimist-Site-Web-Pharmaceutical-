@@ -42,29 +42,31 @@
     
 <div class="bg-red-100 my-5 mx-5 text-red-400 font-bold u-shadow-xl" style="border: 3px solid #e6ccd0; padding: 20px;">
         <div class="grid grid-cols-2 u-gap-4">
-        <div>
-        <label>First Name</label><br>
-        <input type="text" placeholder="Your first name ..."/>
-        </div>
-        <div>
-        <label>Last Name</label><br>
-        <input type="text" placeholder="Your last name ..."/>
-        </div>
+            <div>
+                <label>First Name</label><br>
+                <input type="text" placeholder="Your first name ..."/>
+            </div>
+            <div>
+                <label>Last Name</label><br>
+                <input type="text" placeholder="Your last name ..."/>
+            </div>
         </div>
 
-        <div class="grid grid-cols-1">
-        <label>Email<br>
-        <input type="text" placeholder="example@.com ..."/>
-        </div>
-        <div class="grid grid-cols-1">
-        <label>Subject<br>
-        <input type="url" placeholder="Something ..."/>
+        <div class="grid grid-cols-2 u-gap-4">
+            <div>
+                <label>Email</label><br>
+                <input type="text" placeholder="example@.com ..."/>
+            </div>
+            <div>
+                <label>Subject</label><br>
+               <input type="url" placeholder="Something ..."/>
+            </div>
         </div>
 
         <div class="grid grid-cols-1">
             <label>Message<br>
             <textarea></textarea>
-            <div type="submit" class="btn btn-animated bg-red-200 border-red-300 text-red-400 btn--lg"> SEnd Message </div>
+            <div type="submit" class="btn btn-animated bg-red-200 border-red-300 text-red-400 btn-sm"> SEnd Message </div>
         </div>
 
 </div>   
