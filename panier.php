@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("db_connection.php");
-$user_id = $_SESSION['user']['id_user'];
+$user_id = $_SESSION['id_user'];
 
 ?>
 
