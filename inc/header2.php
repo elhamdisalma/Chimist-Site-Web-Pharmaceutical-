@@ -51,15 +51,7 @@ $row_count = mysqli_num_rows($select_rows);
             <div class="nav-right">
 
                 <div class="nav-item">
-<<<<<<< HEAD
-                      <?php
-                       $id_utilisateur = $_SESSION['user']['id_user'];
-                       
-                    ?>
-                    <a href="panier.php">Panier(0)</a>
-=======
                     <a href="panier.php"><i class="fa fa-cart-arrow-down"></i>(<?php echo $row_count;  ?>)</a>
->>>>>>> 74a92ca4d99f04c1eef1469eae62ade263d3aa60
                 </div>
                 <div class="nav-item">
                     <a href="login.php"><i class="fa fa-user"></i></a>
