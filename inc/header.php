@@ -1,6 +1,12 @@
 <?php
 
-include"inc/function.php";
+include("db_connection.php");
+
+// Dans header.php
+if (!function_exists('getAllCat')) {
+    require_once('inc/function.php');
+}
+
 
    $categorie=getAllCat();
     

@@ -34,11 +34,11 @@ include"inc/function.php";
     include"inc/header.php";
 ?>
 
-    <div class="bg-image">
+<div class="bg-image">
         <div style="position: relative;">
             <h1 class=" text-gray-000 " style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);">WELCOME TO CHEMIST</h1>
            <a href="about.php"> <button class=" bg-gray-000 border-pink-300 text-pink-700 btn--lg font-bold" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">About Us</button> </a>
-            <img class="w-80p w-50p-sm w-auto-md" src="img5.jpg" alt="Image description"/>
+            <img class="w-80p w-50p-sm w-auto-md" src="images/img5.jpg" alt="Image description"/>
         </div>
     </div>
 
@@ -129,21 +129,21 @@ include"inc/function.php";
     <h2 class="py-2 text-red-400 u-text-center mt-5"><u><i>Testimonials</i></u></h2>
     <div class="grid grid-cols-3 u-gap-16 m-16">
         <div>
-            <div class="avatar"><img src="avatar1.jpg" alt="avatar"></div>
+            <div class="avatar"><img src="images/avatar1.jpg" alt="avatar"></div>
             <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Molestias dolore illum est quidem enim, at sapiente aute"
             </i></p>
         </div>
 
         <div>
-            <div class="avatar"><img src="avatar2.jpg" alt="avatar"></div>
+            <div class="avatar"><img src="images/avatar2.jpg" alt="avatar"></div>
             <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Molestias dolore illum est quidem enim, at sapiente aute"
             </i></p>
         </div>
 
         <div>
-            <div class="avatar"><img src="avatar3.jpg" alt="avatar"></div>
+            <div class="avatar"><img src="images/avatar3.jpg" alt="avatar"></div>
             <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Molestias dolore illum est quidem enim, at sapiente aute"
             </i></p>

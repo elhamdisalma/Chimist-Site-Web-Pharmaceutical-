@@ -106,8 +106,8 @@ if(isset($_POST['update_cart'])){
 <div class="grid grid-cols-2 my-8 mx-8 font-bold u-gap-10">
     <div>
     <div class="grid grid-cols-2 u-gap-3"> 
-        <div class="btn bg-red-200 u-center w-100p-md text-red-400 border-gray-200 ">Update Cart</div>
-        <div class="btn bg-white-100 u-center w-100p-md text-red-400 border-red-400">Continue Shopping</div>
+        <a href="panier.php" class="btn bg-red-200 u-center w-100p-md text-red-400 border-gray-200 ">Update Cart</a>
+        <a href="store.php"  class="btn bg-white-100 u-center w-100p-md text-red-400 border-red-400">Continue Shopping</a>
     </div>
 
     <div class=" my-4">

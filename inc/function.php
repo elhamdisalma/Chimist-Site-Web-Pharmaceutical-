@@ -12,6 +12,7 @@
         }
         return $conn;
 
+
     }
 
     function getAllDesc(){
@@ -77,6 +78,8 @@
           return $categorie;
         
        }
+
+
 
 
     

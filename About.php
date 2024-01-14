@@ -54,7 +54,7 @@
 
 
         <div class="grid-c-8 grid-r-4 bg-transparent pr-10" style="">
-            <img class="h-80p w-100p" src="img2.jpg" alt="Image description" /> 
+            <img class="h-80p w-100p" src="images/img2.jpg" alt="Image description" /> 
         </div>
         <div class="grid-c-4 grid-r-6 bg-transparent" style="">
             <h2 class="text-black">How We Started</h2>
@@ -74,7 +74,7 @@
                 asperiores illum. Atque, in, fuga excepturi corrupti error corporis aliquam unde nostrum quas.</p>
         </div>
         <div class="grid-c-8 grid-r-4 bg-transparent u-round-xs pl-20" style="">
-            <img class="h-100p w-100p" src="img1.jpg" alt="Image description" /> 
+            <img class="h-100p w-100p" src="images/img1.jpg" alt="Image description" /> 
         </div>
 
     </div>
@@ -96,21 +96,21 @@
         <h2 class="py-2 text-red-400" style="text-align: center; margin-top: 40px;"><i>The Team</i></h2>
         <div class="grid grid-cols-3 u-gap-16 m-16">
             <div class="grid-c-1">
-                <div class="avatar"><img src="avatar1.jpg" alt="avatar"></div>
+                <div class="avatar"><img src="images/avatar1.jpg" alt="avatar"></div>
                 <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Molestias dolore illum est quidem enim, at sapiente aute"
                 </i></p>
             </div>
     
             <div class="grid-c-1">
-                <div class="avatar"><img src="avatar2.jpg" alt="avatar"></div>
+                <div class="avatar"><img src="images/avatar2.jpg" alt="avatar"></div>
                 <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Molestias dolore illum est quidem enim, at sapiente aute"
                 </i></p>
             </div>
     
             <div class="grid-c-1">
-                <div class="avatar"><img src="avatar3.jpg" alt="avatar"></div>
+                <div class="avatar"><img src="images/avatar3.jpg" alt="avatar"></div>
                 <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Molestias dolore illum est quidem enim, at sapiente aute"
                 </i></p>

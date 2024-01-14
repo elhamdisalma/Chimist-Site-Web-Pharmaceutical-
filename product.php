@@ -57,14 +57,14 @@ include"inc/function.php";
 
     <div class="">
         <div class="mx-8 my-8 h-80p-md bg-gray-100  " style="border: 2px solid #e7e0e5; padding: 20px;">
-    <img src="images/<?php echo $produitR['image']; ?>" class="my-8 mx-8 h-80p">
+    <img src="images/<?php echo $produitR['image']; ?>" class="  h-80p">
          </div>
     </div>
     <div class="mr-8 ml-4 my-8" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
         <h4 class="text-red-400"><?php echo $produitR['nom']; ?></h4>
     <p><?php echo $produitR['long_desc']; ?></p>
 
-          <p class="text-gray-700"><del> <?php echo "$" .$produitR['ancien_prix']; ?></del>  <strong class="text-red-400 text-xl "> <?php echo "$" .$produitR['prix']; ?></strong></p>
+          <p class="text-gray-700"><del> <?php echo  $produitR['ancien_prix']." DH"; ?></del>  <strong class="text-red-400 text-xl "> <?php echo  $produitR['prix']. "DH"; ?></strong></p>
 
           <div class="grid grid-c-1 font-bold u-text-center">  
     
