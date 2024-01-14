@@ -20,29 +20,15 @@
 
 
 
-<div class="mt-10 ml-4 bg-gray-100 mx-2 my-2">
-        <ul class="breadcrumb breadcrumb--left ">
-            <li class="breadcrumb__item ">
-                <a href="home.php" class="text-red-400" >Home</a>
-            </li>
-            <li class="breadcrumb__item">
-                <a href="About.php" class="text-red-400">About</a>
-            </li>
-        </li>
-        
-        <li class="breadcrumb__item breadcrumb__item--active">
-            <a href="#" class="text-gray-700">Store </a>
-        </li>
-        </ul>
-    </div> 
+
 
     <div class="bg-image">
-        <div style="position: relative;">
-            <h1 class=" text-gray-000 " style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -160%);">ABOUT US</h1>
-            <p class=" text-gray-000 " style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); text-align: center;"><b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam consequatur aut repudiandae, tempore reprehenderit nam! Repellendus at,</b></p>
-            <button class=" bg-gray-000 border-pink-300 text-pink-700 btn--lg font-bold" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">TRY NOW</button>
+        <div style="position: relative;" class="font-bold">
+
+            <h1 class=" text-pink-700 " style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;"><b>About Us</b></h1>
+            <a href="home.php" class="btn btn--lg bg-gray-000 u-center  text-pink-700 border-pink-300 " style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%);">Acceuil</a>
             <div>
-                <img class="h-10p" src="images/hero_1.jpg" alt="Image description" />
+                <img class="h-10p" src="images/about.jpg" alt="Image description" />
              </div>
         </div>
     </div>
@@ -53,28 +39,29 @@
     <div class="grid u-gap-2 u-text-center font-bold pt-20 pl-12 pr-10">
 
 
-        <div class="grid-c-8 grid-r-4 bg-transparent pr-10" style="">
+        <div class="grid-c-7 grid-r-4 bg-transparent pr-10" style="">
             <img class="h-80p w-100p" src="images/img2.jpg" alt="Image description" /> 
         </div>
-        <div class="grid-c-4 grid-r-6 bg-transparent" style="">
+        <div class="grid-c-5 grid-r-6 bg-transparent" style="">
             <h2 class="text-black">How We Started</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius repellat, dicta at laboriosam, nemo
-                exercitationem itaque eveniet architecto cumque, deleniti commodi molestias repellendus quos sequi hic fugiat
-                asperiores illum. Atque, in, fuga excepturi corrupti error corporis aliquam unde nostrum quas.</p>
+            <p>Notre histoire débute avec une passion commune pour la santé et le bien-être. Fondée en 2024,
+                 CHIMIST a été créée dans le but clair de rendre les soins de santé accessibles,
+                Malgré nos modestes débuts, notre équipe partageait un engagement inébranlable envers la qualité et le service personnalisé. Chaque étape de notre parcours a été caractérisée par un dévouement constant à l'excellence.  
+                Merci de faire partie de notre histoire, et nous sommes impatients de continuer à grandir ensemble.</p>
         </div> 
     </div>
 
     <div class="grid u-gap-2 u-text-center font-bold pt-20 pl-12 pr-10  pb-10">
 
 
-        <div class="grid-c-4 grid-r-6 bg-transparent" style="">
+        <div class="grid-c-5 grid-r-6 bg-transparent" style="">
             <h2 class="text-black">We Are Trusted Company</h2>
-            <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius repellat, dicta at laboriosam, nemo
-                exercitationem itaque eveniet architecto cumque, deleniti commodi molestias repellendus quos sequi hic fugiat
-                asperiores illum. Atque, in, fuga excepturi corrupti error corporis aliquam unde nostrum quas.</p>
+            <p class="text-black">En tant que société de confiance, nous nous engageons à offrir des produits pharmaceutiques de qualité et un service exceptionnel.
+                 La confiance que nos clients placent en nous est le fondement même de notre succès. Chez [Nom de Votre Pharmacie],
+                 nous continuons à mériter cette confiance en maintenant des normes rigoureuses de qualité, de sécurité et de satisfaction client.</p>
         </div>
-        <div class="grid-c-8 grid-r-4 bg-transparent u-round-xs pl-20" style="">
-            <img class="h-100p w-100p" src="images/img1.jpg" alt="Image description" /> 
+        <div class="grid-c-7 grid-r-4 bg-transparent u-round-xs pl-20" style="">
+            <img class="h-100p w-100p" src="images/trust.jpg" alt="Image description" /> 
         </div>
 
     </div>
@@ -94,27 +81,22 @@
 
     <div>
         <h2 class="py-2 text-red-400" style="text-align: center; margin-top: 40px;"><i>The Team</i></h2>
-        <div class="grid grid-cols-3 u-gap-16 m-16">
+        <div class="grid grid-cols-2 u-gap-16 m-16">
             <div class="grid-c-1">
-                <div class="avatar"><img src="images/avatar1.jpg" alt="avatar"></div>
-                <p><i>"Découvrez comment nos produits ont eu un impact positif sur la vie de nos clients. Nous sommes fiers de
-                 partager leurs témoignages inspirants sur la manière dont nos médicaments"
+                <div class="avatar"><img src="images/salma.jpg" alt="avatar"></div>
+                <p><i>"Salma El Hamdi apporte une passion dynamique et un engagement envers l'innovation en tant qu'étudiante en M-SID au sein de notre équipe.
+                     Son dévouement à l'apprentissage continu et son intérêt pour les technologies de la santé font d'elle un membre précieux de CHIMIST. "
                 </i></p>
             </div>
     
             <div class="grid-c-1">
-                <div class="avatar"><img src="images/avatar2.jpg" alt="avatar"></div>
-                <p><i>"Chez Chimist, nous plaçons la satisfaction du client au cœur de notre mission.
-                 Découvrez ce que nos clients disent de notre service client exceptionnel."
+                <div class="avatar"><img src="images/hajar.jpg" alt="avatar"></div>
+                <p><i>"Hajar Hanaoui apporte une passion dynamique et un engagement envers l'innovation en tant qu'étudiante en M-SID au sein de notre équipe.
+                     Son dévouement à l'apprentissage continu et son intérêt pour les technologies de la santé font d'elle un membre précieux de CHIMIST. "
                 </i></p>
             </div>
     
-            <div class="grid-c-1">
-                <div class="avatar"><img src="images/avatar3.jpg" alt="avatar"></div>
-                <p><i>"Explorez nos produits les plus populaires, approuvés par nos clients satisfaits.
-                 Découvrez pourquoi ces articles sont devenus des favoris."
-                </i></p>
-            </div>
+
     
         </div>
     </div>

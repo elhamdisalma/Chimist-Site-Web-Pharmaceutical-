@@ -39,10 +39,10 @@ include"inc/function.php";
     <div class="mt-10 ml-4 bg-gray-200 mx-2 my-2">
         <ul class="breadcrumb breadcrumb--left ">
             <li class="breadcrumb__item ">
-                <a href="home.html" class="text-red-400" >Home</a>
+                <a href="home.php" class="text-red-400" >Home</a>
             </li>
             <li class="breadcrumb__item">
-                <a href="About.html" class="text-red-400">About</a>
+                <a href="About.php" class="text-red-400">About</a>
             </li>
         </li>
          

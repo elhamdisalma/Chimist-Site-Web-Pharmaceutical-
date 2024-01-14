@@ -182,7 +182,7 @@ include"inc/function.php";
         <div>
             <div class="card my-6 mx-6 hover-grow h-32" style="max-width: 100%;" >
                 <div class="card__container">
-                    <div class="card__image"><img src="images/bg_1.jpg"></div>
+                    <div class="card__image"><img src="images/medi.jpg"></div>
                     <h2>Pharma Products</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.</p>
                 </div>

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Thank you</title>
     </head>
-<body style="font-family: Arial, sans-serif; margin: 0;padding: 0; background-color: #f3eeee;">
+<body style="font-family: Arial, sans-serif; margin: 0;padding: 0; " class="bg-red-000">
 
 <?php
     include"inc/header.php";
@@ -24,36 +24,19 @@
 
 
 
-    <div class="mt-10 ml-4">
-        <ul class="breadcrumb breadcrumb--left ">
-            <li class="breadcrumb__item ">
-                <a href="home.html" class="text-gray-700" >Home</a>
-            </li>
-            <li class="breadcrumb__item">
-                <a href="About.html" class="text-gray-700">About</a>
-            </li>
-            <li class="breadcrumb__item breadcrumb__item--active">
-                <a href="#" class="text-gray-700">Thank you</a>
-            </li>
-        </ul>
-    </div>
 
 
 
-
-
+<div class="mt-48">
     <div class="placeholder">
         <div class="placeholder-icon"><span class="icon"><i class="fa fa-wrapper fa-envelope x-large"></i></span></div>
         <h6 class="placeholder-title">Thank you!</h6>
         <div class="placeholder-subtitle">You experience was successfuly completed.</div>
         <div class="placeholder-commands u-center">
-            <div class="form-group">
-                <input type="email" class="form-group-input" placeholder="Your email">
-                <button class="btn-primary form-group-btn">Sign Up</button>
-            </div>
+
         </div>
     </div>
-
+</div>
 
 
 <?php

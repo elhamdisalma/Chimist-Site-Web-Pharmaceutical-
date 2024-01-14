@@ -95,7 +95,7 @@
     <a href="<?php echo 'product.php?id_product=' . $val['id_product'] ?>" class="border-red-300 text-red-400 ">
         <figure class="fig"><img class="bg-transparent" src="images/<?php echo $val['image']; ?>">
             <h5 class="text-dark"><?php echo $val['nom']; ?></h5>
-            <p class="price"><del><?php echo "$". $val['ancien_prix']; ?></del> &mdash; <?php echo "$". $val['prix']; ?></p>
+            <p class="price"><del><?php echo $val['ancien_prix']. " DH"; ?></del> &mdash; <?php echo $val['prix']." DH"; ?></p>
         </figure></a>
 <?php  }  ?>
 

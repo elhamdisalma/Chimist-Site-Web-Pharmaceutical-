@@ -43,7 +43,7 @@ if(isset($_POST['order_btn'])){
         </li>
         
         <li class="breadcrumb__item breadcrumb__item--active">
-            <a href="#" class="text-gray-700">Contact </a>
+            <a href="#" class="text-gray-700">CheckOut </a>
         </li>
         </ul>
 </div>  
@@ -94,8 +94,8 @@ if(isset($_POST['order_btn'])){
                     </select>
                     <div>
                 </div>
-                <div class="grid grid-cols-1 mt-5">
-                    <input type="submit" value="order now" name="order_btn" class="btn btn-animated bg-red-200 border-red-300 text-red-400 btn-sm">
+                <div class="grid grid-cols-1 mt-5 font bold">
+                    <a href="Thank_you.php" class="btn btn-animated bg-red-200 border-red-300 text-red-400 btn-sm"><div class=" u-center">Order now</div></a>
                 </div>
              
         </div> 
