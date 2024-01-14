@@ -10,10 +10,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script> 
-    <link rel="stylesheet" href="style.css">
+    
     <title>Thank you</title>
     </head>
-<body style="font-family: Arial, sans-serif; margin: 0;padding: 0; " class="bg-red-000">
+<body style="font-family: Arial, sans-serif; margin: 0;padding: 0; background-color: #f3eeee;">
 
 <?php
     include"inc/header.php";
@@ -27,7 +27,7 @@
 
 
 
-<div class="mt-48">
+<div class="mt-16">
     <div class="placeholder">
         <div class="placeholder-icon"><span class="icon"><i class="fa fa-wrapper fa-envelope x-large"></i></span></div>
         <h6 class="placeholder-title">Thank you!</h6>
