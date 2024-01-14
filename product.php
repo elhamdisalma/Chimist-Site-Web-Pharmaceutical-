@@ -3,6 +3,7 @@
 include"inc/function.php";
    $description=getAllDesc();
    $produit=getAllProd();
+   $categorie=getAllCat();
 
   $ic=$_GET['id_product']; 
   //var_dump($ic);
@@ -56,7 +57,7 @@ include"inc/function.php";
 
     <div class="">
         <div class="mx-8 my-8 h-80p-md bg-gray-100  " style="border: 2px solid #e7e0e5; padding: 20px;">
-    <img src="images/<?php echo $produitR['image_product']; ?>" class="my-8 mx-8 h-80p">
+    <img src="images/<?php echo $produitR['image']; ?>" class="my-8 mx-8 h-80p">
          </div>
     </div>
     <div class="mr-8 ml-4 my-8" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
@@ -65,14 +66,25 @@ include"inc/function.php";
 
           <p class="text-gray-700"><del> <?php echo "$" .$produitR['ancien_prix']; ?></del>  <strong class="text-red-400 text-xl "> <?php echo "$" .$produitR['prix']; ?></strong></p>
 
+          <div class="grid grid-c-1 font-bold u-text-center">  
     
+    <?php 
+                 foreach($categorie as $key => $val){
+
+                        if($val['num']==$produitR['num_cat']){
+                           echo ' <a href="home.php?id='.$val['num'].'" class="btn btn-animated bg-gray-000 border-red-300 text-red-400 btn--sm u-center ml-0">'.$val['nom'].'</a> ';
+                              
+                        }
+                 }
+                 ?>
+    </div>      
           
     <!-- ajouter au panier button -->
     <div class="mt-5">
         <form action="add_to_cart.php" method="POST">
             <input type="number" value="1" name="quantite" class="input--sm w-12 "  />
             <input type="hidden" name ="id_produit" value="<?php echo $id_produit;?>"> 
-            <input type="hidden" name="product_image" value="<?php echo$produitR['image_product']; ?>">
+            <input type="hidden" name="product_image" value="<?php echo$produitR['image']; ?>">
             <input type="hidden" name="product_name" value="<?php echo $produitR['nom']; ?>">
             <input type="hidden" name="product_price" value="<?php echo $produitR['prix']; ?>">
             <input type="submit" class="btn btn-animated bg-red-200 border-red-300 text-red-400 btn--lg " name="add_to_cart" value="Add To Cart">
