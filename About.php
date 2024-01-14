@@ -97,22 +97,22 @@
         <div class="grid grid-cols-3 u-gap-16 m-16">
             <div class="grid-c-1">
                 <div class="avatar"><img src="images/avatar1.jpg" alt="avatar"></div>
-                <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Molestias dolore illum est quidem enim, at sapiente aute"
+                <p><i>"Découvrez comment nos produits ont eu un impact positif sur la vie de nos clients. Nous sommes fiers de
+                 partager leurs témoignages inspirants sur la manière dont nos médicaments"
                 </i></p>
             </div>
     
             <div class="grid-c-1">
                 <div class="avatar"><img src="images/avatar2.jpg" alt="avatar"></div>
-                <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Molestias dolore illum est quidem enim, at sapiente aute"
+                <p><i>"Chez Chimist, nous plaçons la satisfaction du client au cœur de notre mission.
+                 Découvrez ce que nos clients disent de notre service client exceptionnel."
                 </i></p>
             </div>
     
             <div class="grid-c-1">
                 <div class="avatar"><img src="images/avatar3.jpg" alt="avatar"></div>
-                <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Molestias dolore illum est quidem enim, at sapiente aute"
+                <p><i>"Explorez nos produits les plus populaires, approuvés par nos clients satisfaits.
+                 Découvrez pourquoi ces articles sont devenus des favoris."
                 </i></p>
             </div>
     

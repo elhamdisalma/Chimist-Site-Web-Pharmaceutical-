@@ -3,6 +3,7 @@
 include"inc/function.php";
    $description=getAllDesc();
    $produit=getAllProd();
+   $categorie=getAllCat();  
 
    if(isset($_POST['recherche'])){
     if(!empty($_POST['search'])){
@@ -12,6 +13,10 @@ include"inc/function.php";
       
     }
   } 
+  $ic=0;
+  if(isset($_GET['id'])){
+    $ic=$_GET['id'];
+  }
 
    
 ?>
@@ -54,7 +59,26 @@ include"inc/function.php";
     <div class="grid grid-cols-4 u-gap-4 m-8 text-gray-700 u-text-center ">
     <?php  
              foreach($produit as $val){
-    ?>
+                if($ic==0){ ?>
+                
+                <div class="card hover-grow grid-c-1 max-w-xs " >
+        <div class="card__container ">
+            <div class="card__image "><img src="images/<?php echo $val['image']; ?>"></div>
+            <div class="card__title-container">
+                <p class="title"><?php echo $val['nom']; ?></p>
+            </div>
+        </div>
+        <div class="content">
+            <p><code class="text-red-400"><?php echo $val['nom']; ?></code>:<?php echo $val['short_desc']; ?></p>
+        </div>
+        <div class="card__action-bar u-center">
+        <a href="<?php echo 'product.php?id_product=' . $val['id_product'] ?>" class="btn card btn-animated bg-red-200 border-red-300 text-white  hover-grow   " style="background: linear-gradient(to right, #f8d3c9, #f2b6a5);">Afficher</a>
+        </div>
+    </div>
+                
+                
+                <?php }else{ 
+                    if($val['num_cat']==$ic){ ?>
     <div class="card hover-grow grid-c-1 max-w-xs " >
         <div class="card__container ">
             <div class="card__image "><img src="images/<?php echo $val['image']; ?>"></div>
@@ -69,9 +93,9 @@ include"inc/function.php";
         <a href="<?php echo 'product.php?id_product=' . $val['id_product'] ?>" class="btn card btn-animated bg-red-200 border-red-300 text-white  hover-grow   " style="background: linear-gradient(to right, #f8d3c9, #f2b6a5);">Afficher</a>
         </div>
     </div>
- <?php 
-   } 
- ?>
+ <?php  }
+   } } ?>
+
 
 
 
@@ -107,20 +131,18 @@ include"inc/function.php";
       <div class=" grid grid-cols-2 mx-24 my-6 u-gap-12">
         <div class="">
             
-        <img src="images/product_01.png" class="w-100p max-w-60p h-32 u-shadow-lg" style="background-color: white; border-radius: 122px 0px 122px 0px;">
-        <h5 class=" u-left mt-5">Bioderma</h5>
-        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, sit dolores? Possimus modi, 
-            quaerat soluta accusamus, omnis consequatur odit dicta officiis,
-             ducimus explicabo consequuntur molestiae id fuga exercitationem unde delectus?</p>
+        <img src="images/aspro.png" class="w-80p max-w-60p h-32 u-shadow-lg" style="background-color: white; border-radius: 122px 0px 122px 0px;">
+        <h5 class=" u-left mt-5">Aspro</h5>
+        <p >Un AINS utilisé pour soulager la douleur, réduire l'inflammation et prévenir la coagulation sanguine.
+             Il est souvent utilisé pour les problèmes cardiaques et comme analgésique.</p>
       
         </div>
       
         <div class="">
-            <h5 class=" u-left">Chanca biedra</h5>
-        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, sit dolores? Possimus modi, 
-            quaerat soluta accusamus, omnis consequatur odit dicta officiis,
-             ducimus explicabo consequuntur molestiae id fuga exercitationem unde delectus?</p>
-        <img src="images/product_02.png" class="w-100p max-w-60p h-32 mt-5 u-shadow-lg mx-8" style="background-color: white; border-radius: 122px 0px 122px 0px;">
+            <h5 class=" u-left">Doliprane</h5>
+        <p class="">C'est un analgésique et antipyrétique couramment utilisé pour soulager la douleur et abaisser la fièvre.
+             Il est populaire en raison de son efficacité et de sa disponibilité sans ordonnance.</p>
+        <img src="images/doliprane.png" class="w-100p max-w-60p h-32 mt-5 u-shadow-lg mx-8" style="background-color: white; border-radius: 122px 0px 122px 0px;">
         </div>
     </div>
     </div>
@@ -130,22 +152,22 @@ include"inc/function.php";
     <div class="grid grid-cols-3 u-gap-16 m-16">
         <div>
             <div class="avatar"><img src="images/avatar1.jpg" alt="avatar"></div>
-            <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Molestias dolore illum est quidem enim, at sapiente aute"
+            <p><i>"Découvrez comment nos produits ont eu un impact positif sur la vie de nos clients. Nous sommes fiers de
+                 partager leurs témoignages inspirants sur la manière dont nos médicaments "
             </i></p>
         </div>
 
         <div>
             <div class="avatar"><img src="images/avatar2.jpg" alt="avatar"></div>
-            <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Molestias dolore illum est quidem enim, at sapiente aute"
+            <p><i>"Chez Chimist, nous plaçons la satisfaction du client au cœur de notre mission.
+                 Découvrez ce que nos clients disent de notre service client exceptionnel."
             </i></p>
         </div>
 
         <div>
             <div class="avatar"><img src="images/avatar3.jpg" alt="avatar"></div>
-            <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Molestias dolore illum est quidem enim, at sapiente aute"
+            <p><i>"Explorez nos produits les plus populaires, approuvés par nos clients satisfaits.
+                 Découvrez pourquoi ces articles sont devenus des favoris. "
             </i></p>
         </div>
 
