@@ -57,7 +57,7 @@ include"inc/function.php";
 
     <div class="">
         <div class="mx-8 my-8 h-80p-md bg-gray-100  " style="border: 2px solid #e7e0e5; padding: 20px;">
-    <img src="images/<?php echo $produitR['image']; ?>" class="  h-80p">
+    <img src="images/<?php echo $produitR['image_product']; ?>" class="my-8 mx-8 h-80p">
          </div>
     </div>
     <div class="mr-8 ml-4 my-8" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
